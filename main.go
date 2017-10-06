@@ -3,6 +3,7 @@ package main
 import (
 	"./ween"
 	"./weenie"
+	"./commands"
 	"fmt"
 )
 
@@ -15,4 +16,6 @@ func main() {
 	fmt.Println(c)
 
 	ween.Poop(w)
+	commands.Shit()
+	commands.Poop()
 }
