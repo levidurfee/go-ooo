@@ -13,4 +13,6 @@ func main() {
 	w.SetCats(4)
 	c := w.Cats()
 	fmt.Println(c)
+
+	ween.Poop(w)
 }
