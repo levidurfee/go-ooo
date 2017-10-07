@@ -18,4 +18,9 @@ func main() {
 	ween.Poop(w)
 	commands.Shit()
 	commands.Poop()
+
+	i := 5
+	j := &i
+	*j = 6
+	fmt.Println(i)
 }
