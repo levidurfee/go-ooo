@@ -2,22 +2,11 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"github.com/levidurfee/go/pages"
 )
 
-func say(s string) {
-	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
-		fmt.Println(s)
-	}
-}
-
 func main() {
-	go say("world")
-	go say("hello")
-	go say("HOUSE")
-	go say("light")
-	go say("FRANK")
-
-	time.Sleep(5 * 500 * time.Millisecond)
+	fmt.Println("Starting")
+	home := pages.Page { Id: 1, Url: "/", Title: "Home", Content: "Welcome" }
+	about := pages.NewPage(2, "/about/", "About", "Hii")
 }
