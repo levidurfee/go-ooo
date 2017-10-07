@@ -1,26 +1,23 @@
 package main
 
 import (
-	"./ween"
-	"./weenie"
-	"./commands"
 	"fmt"
+	"time"
 )
 
+func say(s string) {
+	for i := 0; i < 5; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+}
+
 func main() {
-	weenie.Display("Hi")
+	go say("world")
+	go say("hello")
+	go say("HOUSE")
+	go say("light")
+	go say("FRANK")
 
-	w := ween.Ween{}
-	w.SetCats(4)
-	c := w.Cats()
-	fmt.Println(c)
-
-	ween.Poop(w)
-	commands.Shit()
-	commands.Poop()
-
-	i := 5
-	j := &i
-	*j = 6
-	fmt.Println(i)
+	time.Sleep(5 * 500 * time.Millisecond)
 }
